@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/index",
+    "pages/category/category"
+  ],
+  "usingComponents": {
+    "atom-icon": "component-atom/icon/index",
+    "atom-button": "component-atom/button/index",
+    "atom-input": "component-atom/input/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "miniprogram",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,7 @@
+view.page-home(class!="{{visible ? 'trigger' : ''}}")
+  view.icon-wrapper
+    atom-icon.atom-icon
+  atom-button(bind:tap="handleButtonTap") 点击按钮
+  atom-input(ext-class="input-border" validate="{{isChineseName}}" value="{{name}}")
+    view(slot="before" class="input-label") 前文案
+    view(slot="after" class="input-label") 后文案

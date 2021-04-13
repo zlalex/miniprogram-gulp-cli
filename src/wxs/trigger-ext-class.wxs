@@ -1,0 +1,8 @@
+var triggerExtClass = function (extClass) {
+  var className = extClass ? ['~', extClass].join('') : ''
+  return className
+}
+
+module.exports = {
+  triggerExtClass: triggerExtClass
+}

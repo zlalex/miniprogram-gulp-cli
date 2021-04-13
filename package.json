@@ -1,0 +1,35 @@
+{
+  "name": "miniprogram-base",
+  "version": "0.0.1",
+  "description": "wechat-store",
+  "main": "",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev node build/index.js",
+    "uat": "cross-env NODE_ENV=uat node build/index.js",
+    "prod": "cross-env NODE_ENV=prod node build/index.js",
+    "build": "cross-env NODE_ENV=prod RUNTIME=production node build/index.js"
+  },
+  "author": "",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-json-editor": "^2.5.4",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "shelljs": "^0.8.4"
+  },
+  "dependencies": {}
+}

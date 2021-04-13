@@ -1,0 +1,16 @@
+.page-index {
+  &.trigger {
+    .icon-wrapper {
+      background: cornflowerblue;
+    }
+    .atom-icon {
+      color: #fff;
+    }
+  }
+  .icon-wrapper {
+    background: chocolate;
+  }
+  .atom-icon {
+    color: #333;
+  }
+}
