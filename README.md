@@ -100,7 +100,7 @@ $ npm install --save-dev @babel/core @babel/preset-env @babel/register
 
 ## src.utils
 
-> methods-公共方法, native-wx方法, third-第三方方法, validate-数据校验
+> methods-公共方法, native-wx方法, validation-数据校验
 
 ## src.wxs
 

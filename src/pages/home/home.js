@@ -1,5 +1,7 @@
-import validate from '../../utils/validate/index'
-const { isChineseName } = validate
+import validation from '../../validation/index'
+
+const { isChineseName } = validation
+
 Page({
   data: {
     visible: false,

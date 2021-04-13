@@ -1,16 +1,9 @@
 .page-index {
-  &.trigger {
-    .icon-wrapper {
-      background: cornflowerblue;
-    }
-    .atom-icon {
-      color: #fff;
-    }
+  .form-input-item {
+    width: 80vw;
+    margin: 10rpx auto;
   }
-  .icon-wrapper {
-    background: chocolate;
-  }
-  .atom-icon {
-    color: #333;
+  .error-message {
+    color: red;
   }
 }

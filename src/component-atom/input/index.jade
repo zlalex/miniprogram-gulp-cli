@@ -6,10 +6,11 @@ view.component-atom-input(class="{{_.triggerExtClass(extClass)}}")
     wx:else
     placeholder="{{placeholder}}"
     maxlength="{{maxlength}}"
-    value="{{value}}"
+    value="{{scopeValue}}"
     disabled="{{disabled}}"
     bind:input="handleInput"
     bind:change="handleChange"
     bind:blur="handleBlur"
   )
-  slot(name="after")
+  slot(name="after-error" wx:if="{{isError}}")
+  slot(name="after-require" wx:if="{{!isRequired}}")

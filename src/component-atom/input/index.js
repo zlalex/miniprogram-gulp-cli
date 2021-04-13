@@ -1,21 +1,35 @@
 import atomForm from '../../behaviors/atom-form'
+import propClassName from '../../behaviors/prop-class-name'
 
 Component({
   options: {
     multipleSlots: true
   },
-  behaviors: [atomForm],
+  behaviors: [atomForm, propClassName],
   properties: {
+    readonly: { type: Boolean },
+    disabled: { type: Boolean },
     placeholder: { type: String },
     maxlength: { type: String, value: '250' }
   },
+  data: {
+    isError: false,
+    isRequired: true
+  },
   methods: {
-    handleChange(event) { },
-    handleInput(event) {
-      const value= event.detail.value
-      this.triggerEvent('input', value)
-      console.log(this.data.validate)
+    handleChange(e) {
+      const value = this.updateModel(e, true)
+      this.triggerEvent('change', value)
     },
-    handleBlur(event) { }
+    handleInput(e) {
+      const value = this.updateModel(e)
+      this.validate(value)
+      this.triggerEvent('input', value)
+    },
+    handleBlur(e) {
+      const value = this.updateModel(e)
+      this.validate(value)
+      this.triggerEvent('blur', value)
+    },
   }
 })

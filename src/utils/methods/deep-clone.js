@@ -1,4 +1,4 @@
-import typeofDatum from '../validate/typeof-datum'
+import typeofDatum from '../../validation/typeof-datum'
 
 const { isArray, isObject } = typeofDatum
 
