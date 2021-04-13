@@ -1,10 +1,10 @@
-import atomFormBehaviors from '../../behaviors/atom-form-behaviors'
+import atomForm from '../../behaviors/atom-form'
 
 Component({
   options: {
     multipleSlots: true
   },
-  behaviors: [atomFormBehaviors],
+  behaviors: [atomForm],
   properties: {
     placeholder: { type: String },
     maxlength: { type: String, value: '250' }

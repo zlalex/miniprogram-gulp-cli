@@ -1,4 +1,4 @@
-import componentPropClass from './component-prop-class'
+import propClassName from './prop-class-name'
 
 export default Behavior({
   properties: {
@@ -7,7 +7,7 @@ export default Behavior({
     disabled: { type: Boolean },
     value: { type: String },
   },
-  behaviors: [componentPropClass],
+  behaviors: [propClassName],
   data: {},
   methods: {}
 })

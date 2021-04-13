@@ -46,13 +46,13 @@ $ npm install --save-dev @babel/core @babel/preset-env @babel/register
 
 > 图片资源
 
-## src.component-packages
+## src.component-atom
 
-> 公共组件`icon, popup, confirm, button, currency, image, loading, form...`
+> 原子组件 `icon, popup, confirm, button, currency, image, loading, form...`
 
-## src.component-widgets
+## src.component-module
 
-> 公共业务组件`sku-module, product-card, scroll-to-top, step-selector...`
+> 功能组件 `sku-module, product-card, scroll-to-top, step-selector...`
 
 ## src.components
 
@@ -70,9 +70,9 @@ $ npm install --save-dev @babel/core @babel/preset-env @babel/register
 
 > 处理接口数据
 
-## src.mixins
+## src.behaviors
 
-> 页面、组件mixin
+> 页面、组件behavior
 
 ## src.models
 

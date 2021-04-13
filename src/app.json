@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/home/index",
+    "pages/home/home",
     "pages/category/category"
   ],
   "usingComponents": {

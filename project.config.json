@@ -53,13 +53,7 @@
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "pages/home/index",
-          "pathName": "pages/home/index",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }
