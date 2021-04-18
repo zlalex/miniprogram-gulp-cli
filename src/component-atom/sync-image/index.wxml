@@ -1,0 +1,3 @@
+<view class="component-sync-image {{propClass}} {{miniHeight ? 'mini-height' : ''}}">
+  <image class="image ext-class" wx:if="{{isMounted}}" src="{{url}}"></image>
+</view>

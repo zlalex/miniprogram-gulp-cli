@@ -1,16 +1,18 @@
-wxs(src="../../wxs/trigger-ext-class.wxs" module="_")
-view.component-atom-input(class="{{_.triggerExtClass(extClass)}}")
-  slot(name="before")
-  view.atom-input-readonly(wx:if!="{{readonly}}") {{value}}
-  input.atom-input__standard(
-    wx:else
-    placeholder="{{placeholder}}"
-    maxlength="{{maxlength}}"
-    value="{{scopeValue}}"
-    disabled="{{disabled}}"
-    bind:input="handleInput"
-    bind:change="handleChange"
-    bind:blur="handleBlur"
-  )
-  slot(name="after-error" wx:if="{{isError}}")
-  slot(name="after-require" wx:if="{{!isRequired}}")
+view.component-atom-input(class="{{propClass}}")
+  view.atom-input-layout()
+    view.atom-input-label {{label}}
+    view.atom-input-readonly(wx:if!="{{readonly}}") {{scopeValue}}
+    input.atom-input__standard(
+      wx:else
+      class="ext-class"
+      placeholder="{{placeholder}}"
+      maxlength="{{maxlength}}"
+      value="{{scopeValue}}"
+      disabled="{{disabled}}"
+      bind:input="handleInput"
+      bind:change="handleChange"
+      bind:blur="handleBlur"
+    )
+  block(wx:if="{{slot}}")
+    slot
+  view.atom-input-tips(wx:elif!="{{isError || !isRequired}}") {{isError ? validation.fail : (!isRequired ? validation.empty : '')}}

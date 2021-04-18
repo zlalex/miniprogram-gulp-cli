@@ -1,0 +1,29 @@
+.component-register-form {
+  // background-color: cyan;
+
+  .form-input-item {
+    width: 80vw;
+  }
+
+  .prop-class {
+    background: pink;
+
+    .atom-input__standard {
+      color: red;
+    }
+  }
+
+  .user-name {
+    border: 2rpx solid cyan;
+    margin: 10rpx auto 0;
+  }
+
+  .user-email {
+    border: 2rpx solid red;
+    margin: 10rpx auto 0;
+  }
+
+  .atom-input-tips {
+    color: red;
+  }
+}

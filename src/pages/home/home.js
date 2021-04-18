@@ -1,6 +1,6 @@
-import validation from '../../validation/index'
+import validates from '../../validates/index'
 
-const { isChineseName } = validation
+const { isChineseName } = validates
 
 Page({
   data: {

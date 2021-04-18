@@ -1,9 +1,12 @@
 .page-index {
-  .form-input-item {
-    width: 80vw;
-    margin: 10rpx auto;
-  }
-  .error-message {
+  background: steelblue;
+
+  .atom-input__standard {
     color: red;
+  }
+
+  .min-view-height {
+    height: 120rpx;
+    background-color: red;
   }
 }

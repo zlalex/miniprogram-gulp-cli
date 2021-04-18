@@ -1,29 +1,8 @@
 <view class="page-index">
-    <atom-input
-        ext-class="form-input-item"
-        id="user-name"
-        validation="{{isChineseName}}"
-        require="{{true}}"
-        value="{{formData.userName}}"
-        placeholder="请输入姓名"
-        data-name="userName"
-        bind:input="handleFormChange">
-        <view slot="before">用户名：</view>
-        <view class="error-message" slot="after-error">请输入正确的姓名！</view>
-        <view class="error-message" slot="after-require">请输入姓名！</view>
-    </atom-input>
-    <atom-input
-        id="email"
-        ext-class="form-input-item"
-        validation="{{isEmail}}"
-        require="{{false}}"
-        value="{{formData.email}}"
-        placeholder="请输入邮箱"
-        data-name="email"
-        bind:input="handleFormChange">
-        <view slot="before">邮箱：</view>
-        <view class="error-message" slot="after-error">请输入正确的邮箱！</view>
-        <view class="error-message" slot="after-require">请输入邮箱！</view>
-    </atom-input>
-    <atom-button bind:tap="handleButtonTap">提交</atom-button>
+    <register-form bind:submit="handleRegisterFormSubmit"></register-form>
+    <view style="height: 100vh;"></view>
+    <atom-sync-view prop-class="~min-view-height">
+        <view class="slot-view">123</view>
+    </atom-sync-view>
+    <atom-sync-image prop-class="~min-view-height" url="//www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"></atom-sync-image>
 </view>
