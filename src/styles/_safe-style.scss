@@ -1,0 +1,17 @@
+@mixin safe-style($key, $value) {
+  #{$key}: calc(0rpx + #{$value});
+  #{$key}: calc(constant(safe-area-inset-bottom) + #{$value});
+  #{$key}: calc(env(safe-area-inset-bottom) + #{$value});
+}
+
+@mixin safe-padding-bottom($value: 0rpx) {
+  @include safe-style(padding-bottom, $value);
+}
+
+@mixin safe-margin-bottom($value: 0rpx) {
+  @include safe-style(margin-bottom, $value);
+}
+
+@mixin safe-bottom($value: 0rpx) {
+  @include safe-style(bottom, $value);
+}

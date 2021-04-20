@@ -1,0 +1,20 @@
+var classNameMap = {
+  mount: 'page-view-mounted',
+  insetTabBar: 'inset-tab-bar',
+  normal: 'normal'
+}
+var computedClassName = function (mount, insetTabBar, normal, propClassName) {
+  var result = [
+    mount && classNameMap['mount'],
+    insetTabBar && classNameMap['insetTabBar'],
+    normal && classNameMap['normal'],
+    propClassName
+  ].filter(function (item) {
+    return !!item
+  }).join(' ')
+
+  return result
+}
+module.exports = {
+  computedClassName: computedClassName
+};

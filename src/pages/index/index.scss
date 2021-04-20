@@ -1,12 +1,9 @@
+@import "../../styles/safe-style";
+
 .page-index {
+  min-height: 100vh;
   background: steelblue;
-
-  .atom-input__standard {
-    color: red;
-  }
-
   .min-view-height {
-    height: 120rpx;
-    background-color: red;
+    height: 20vh;
   }
 }

@@ -1,8 +1,15 @@
 Page({
   data: {
-    registerFormData: {}
+    registerFormData: {},
+    mount: false
   },
-  onLoad() { },
+  onLoad() {
+    setTimeout(() => {
+      this.setData({
+        mount: true
+      })
+    }, 1e3)
+  },
   handleRegisterFormSubmit(event) {
     const { detail } = event
     const { validate, formData } = detail
