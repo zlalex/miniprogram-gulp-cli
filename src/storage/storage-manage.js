@@ -1,7 +1,8 @@
 import storage from './index'
 
 const STORAGE_PREFIX = 'WECHAT_'
-const __ = keyword = key => `${STORAGE_PREFIX}${key}`
+const storageKeyword = key => `${STORAGE_PREFIX}${key}`
+const __ = storageKeyword
 
 export default {
   setToken(value) {
