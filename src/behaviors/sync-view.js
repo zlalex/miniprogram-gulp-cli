@@ -42,7 +42,6 @@ export default Behavior({
       const { top, height } = rect
       const isInDeviceView = top < deviceHeight && (top + height) > 0
       if (isInDeviceView) { return this.handleViewMount() }
-      console.log([rect, viewClassName])
       createIntersectionObserver.call(this, viewClassName, { top: top - deviceHeight }, data => {
         !this.data.isMounted && this.handleViewMount()
       })

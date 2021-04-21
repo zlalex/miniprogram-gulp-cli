@@ -1,10 +1,13 @@
-@import "../../styles/safe-style";
+@import "../../styles/index.scss";
+
 .atom-page-view {
   opacity: 0;
   transition: opacity 0.5s;
+
   .page-view-content {
     @include safe-padding-bottom();
   }
+
   .page-view-footer {
     position: fixed;
     left: 0;
@@ -14,20 +17,24 @@
     background-color: transparent;
     @include safe-padding-bottom();
   }
+
   &.normal {
     .page-view-content {
       padding-bottom: 0;
     }
   }
+
   &.inset-tab-bar {
     .page-view-content {
-      @include safe-padding-bottom(120rpx);
+      @include safe-padding-bottom($tab-bar-height);
     }
+
     .page-view-footer {
       padding-bottom: 0;
-      @include safe-bottom(120rpx);
+      @include safe-bottom($tab-bar-height);
     }
   }
+
   &.page-view-mounted {
     opacity: 1;
     transition: opacity 0.5s;

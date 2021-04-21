@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "绝情坑",
+  "navigationStyle": "custom",
   "usingComponents": {
     "register-form": "../../components/register-form/index"
   }

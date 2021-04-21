@@ -1,0 +1,17 @@
+var isActive = function (item, activePath) {
+  var result = item.path === activePath
+  if (result) return result
+  return ''
+}
+
+var activeImagePath = function (item, activePath) {
+  if (!!isActive(item, activePath)) {
+    return item.activePath
+  }
+  return item.defaultPath
+}
+
+module.exports = {
+  isActive: isActive,
+  activeImagePath: activeImagePath
+};

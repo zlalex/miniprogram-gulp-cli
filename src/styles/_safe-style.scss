@@ -1,17 +1,38 @@
-@mixin safe-style($key, $value) {
+// iPhone X 底部黑线
+@mixin safe-style-bottom($key, $value) {
   #{$key}: calc(0rpx + #{$value});
   #{$key}: calc(constant(safe-area-inset-bottom) + #{$value});
   #{$key}: calc(env(safe-area-inset-bottom) + #{$value});
 }
 
 @mixin safe-padding-bottom($value: 0rpx) {
-  @include safe-style(padding-bottom, $value);
+  @include safe-style-bottom(padding-bottom, $value);
 }
 
 @mixin safe-margin-bottom($value: 0rpx) {
-  @include safe-style(margin-bottom, $value);
+  @include safe-style-bottom(margin-bottom, $value);
 }
 
 @mixin safe-bottom($value: 0rpx) {
-  @include safe-style(bottom, $value);
+  @include safe-style-bottom(bottom, $value);
+}
+
+// iPhone X 头部刘海(Android和开发者工具不生效)
+// 兼容全面屏刘海，需要动态获取顶部高度设置padding-top
+@mixin safe-style-top($key, $value) {
+  #{$key}: calc(0rpx + #{$value});
+  #{$key}: calc(constant(safe-area-inset-top) + #{$value});
+  #{$key}: calc(env(safe-area-inset-top) + #{$value});
+}
+
+@mixin safe-padding-top($value: 0rpx) {
+  @include safe-style-top(padding-top, $value);
+}
+
+@mixin safe-margin-top($value: 0rpx) {
+  @include safe-style-top(margin-top, $value);
+}
+
+@mixin safe-top($value: 0rpx) {
+  @include safe-style-top(top, $value);
 }

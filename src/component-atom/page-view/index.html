@@ -1,4 +1,5 @@
 <wxs src="../../wxs/atom-page-view.wxs" module="_" />
+<custom-nav-bar wx:if="{{insetNavBar}}"></custom-nav-bar>
 <view class="atom-page-view {{_.computedClassName(mount, insetTabBar, normal, propClass)}}">
   <view class="page-view-header" wx:if="{{slotHeader}}">
     <slot name="header"></slot>

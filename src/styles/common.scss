@@ -1,0 +1,14 @@
+// TODO
+/**
+ * z-index value
+ * layout: 0 - 9
+ * fixed: 10 - 99
+ * popup: 100 - 200
+ * toast: 300
+ */
+
+@mixin flex-box($align:center, $justify:space-between) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}

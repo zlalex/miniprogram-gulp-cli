@@ -1,3 +1,12 @@
+<wxs src="../wxs/custom-tab-bar.wxs" module="_"></wxs>
 <view class="custom-tab-bar">
-
+  <block wx:for="{{tabBarConfig}}" wx:key="index">
+    <view class="tab-bar-item {{_.isActive(item, activePath) && 'active'}}" data-item="{{item}}"
+      bind:tap="handleTabItemActive">
+      <view class="tab-item-image">
+        <image class="item-image" src="{{_.activeImagePath(item, activePath)}}" />
+      </view>
+      <view class="tab-item-text"> {{item.name}} </view>
+    </view>
+  </block>
 </view>

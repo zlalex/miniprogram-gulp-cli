@@ -8,9 +8,27 @@
     "atom-icon": "component-atom/icon/index",
     "atom-button": "component-atom/button/index",
     "atom-input": "component-atom/input/index",
+    "atom-popup": "component-atom/popup/index",
     "sync-view": "component-atom/sync-view/index",
     "sync-image": "component-atom/sync-image/index",
-    "page-view": "component-atom/page-view/index"
+    "page-view": "component-atom/page-view/index",
+    "custom-nav-bar": "custom-nav-bar/index"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [{
+        "pagePath": "pages/category/category"
+      },
+      {
+        "pagePath": "pages/home/home"
+      },
+      {
+        "pagePath": "pages/index/index"
+      }
+    ]
   },
   "window": {
     "backgroundTextStyle": "light",

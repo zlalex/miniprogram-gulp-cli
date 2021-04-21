@@ -1,3 +1,41 @@
+@import "../styles/index.scss";
+
 .custom-tab-bar {
-  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  @include flex-box();
+  width: 100%;
+  height: $tab-bar-height;
+  @include safe-padding-bottom();
+  background-color: #fff;
+
+  .tab-bar-item {
+    flex: 1;
+    height: 100%;
+    @include flex-box(center, center);
+    flex-direction: column;
+
+    &.active {
+
+      .item-image {
+        background-color: red;
+      }
+
+      .tab-item-text {
+        color: #000;
+      }
+    }
+  }
+
+  .item-image {
+    width: 40rpx;
+    height: 40rpx;
+    background-color: hotpink;
+  }
+
+  .tab-item-text {
+    color: #999;
+  }
 }

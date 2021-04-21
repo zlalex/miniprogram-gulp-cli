@@ -1,0 +1,141 @@
+@keyframes viewFadeIn {
+  0% {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes viewFadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideDownOut {
+  0% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 120%, 0);
+  }
+}
+
+@keyframes slideDownIn {
+  0% {
+    transform: translate3d(0, 120%, 0);
+  }
+
+  to {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes slideUpOut {
+  0% {
+    transform: translateZ(0);
+  }
+
+  to {
+    transform: translate3d(0, -120%, 0);
+  }
+}
+
+@keyframes slideUpIn {
+  0% {
+    transform: translate3d(0, -120%, 0);
+  }
+
+  to {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes slideLeftOut {
+  0% {
+    transform: translateZ(0);
+  }
+
+  to {
+    transform: translate3d(-120%, 0, 0);
+  }
+}
+
+@keyframes slideLeftIn {
+  0% {
+    transform: translate3d(-120%, 0, 0);
+  }
+
+  to {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes slideRightIn {
+  0% {
+    transform: translate3d(120%, 0, 0);
+  }
+
+  to {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes slideRightOut {
+  0% {
+    transform: translateZ(0);
+  }
+
+  to {
+    transform: translate3d(120%, 0, 0);
+  }
+}
+
+.animate-fade__in {
+  animation: viewFadeIn ease 0.5s forwards;
+}
+
+.animate-fade__out {
+  animation: viewFadeOut ease 0.5s forwards;
+}
+
+.animate-slide__down-out {
+  animation: slideDownOut ease 0.5s forwards;
+}
+
+.animate-slide__down-in {
+  animation: slideDownIn ease 0.5s forwards;
+}
+
+.animate-slide__up-out {
+  animation: slideUpOut ease 0.5s forwards;
+}
+
+.animate-slide__up-in {
+  animation: slideUpIn ease 0.5s forwards;
+}
+
+.animate-slide__left-out {
+  animation: slideLeftOut ease 0.5s forwards;
+}
+
+.animate-slide__left-in {
+  animation: slideLeftIn ease 0.5s forwards;
+}
+
+.animate-slide__right-out {
+  animation: slideRightOut ease 0.5s forwards;
+}
+
+.animate-slide__right-in {
+  animation: slideRightIn ease 0.5s forwards;
+}

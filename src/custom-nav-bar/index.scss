@@ -1,3 +1,11 @@
+@import '../styles/index.scss';
+
 .custom-nav-bar {
-  display: flex;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $nav-bar-height;
+  @include safe-padding-top(88rpx);
 }

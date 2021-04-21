@@ -14,6 +14,7 @@ Page({
     const { detail } = event
     const { validate, formData } = detail
     this.setData({ registerFormData: formData })
+    console.log(validate, formData)
     if (!validate) { return }
   }
 })

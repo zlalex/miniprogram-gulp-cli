@@ -1,0 +1,14 @@
+<view class="component-atom-input {{propClass}}">
+  <view class="atom-input-layout">
+    <view class="atom-input-label">{{label}}</view>
+    <view class="atom-input-readonly" wx:if="{{readonly}}">{{scopeValue}}</view>
+    <input wx:else class="atom-input__standard ext-class" type="text" placeholder="{{placeholder}}"
+      maxlength="{{maxlength}}" value="{{scopeValue}}" disabled="{{disabled}}" bind:input="handleInput"
+      bind:change="handleChange" bind:blur="handleBlur" />
+  </view>
+  <block wx:if="{{slot}}">
+    <slot></slot>
+  </block>
+  <view class="atom-input-tips" wx:elif="{{isError || !isRequired}}">
+    {{isError ? validation.fail : (!isRequired ? validation.empty : '')}}</view>
+</view>

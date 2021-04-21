@@ -17,6 +17,7 @@ const setGulpCommand = ['gulp', isBuild ? 'build' : ''].join(' ')
 const shellCommand = ['cross-env', setNodeEnvCommand, setProductionCommand, setGulpCommand].filter(c => c).join(' ').trim()
 
 // node build/index.js
+isBuild && shell.exec('rm -rf dist/')
 fs.writeFile(outputPath, outputProgramConfig, function (error) {
   if (error) return console.error(error)
   console.log(`=>>${shellCommand}<<=`)
