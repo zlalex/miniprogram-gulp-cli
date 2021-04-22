@@ -16,5 +16,9 @@ Page({
     this.setData({ registerFormData: formData })
     console.log(validate, formData)
     if (!validate) { return }
+
+    wx.navigateTo({
+      url: '/pages/member/member'
+    })
   }
 })

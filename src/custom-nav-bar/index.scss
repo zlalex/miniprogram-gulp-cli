@@ -6,4 +6,16 @@
   left: 0;
   top: 0;
   width: 100%;
+  @include flex-box();
+  background-color: #fff;
+
+  .nav-bar-left,
+  .nav-bar-center,
+  .nav-bar-right {
+    @include flex-box();
+  }
+
+  .nav-bar-center {
+    text-align: center;
+  }
 }

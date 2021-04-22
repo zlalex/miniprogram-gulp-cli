@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/home/home",
-    "pages/category/category"
+    "pages/category/category",
+    "pages/member/member"
   ],
   "usingComponents": {
     "atom-icon": "component-atom/icon/index",

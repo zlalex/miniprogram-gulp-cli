@@ -1,5 +1,7 @@
-module.exports = {
-  collapseWhitespace: true,
-  removeComments: true,
-  keepClosingSlash: true
+module.exports ={
+  type: 'minify',
+  preserveComments: false,
+  extensions: {
+    'wxml': 'xml'
+  }
 }

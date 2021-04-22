@@ -1,11 +1,21 @@
 @import "../../styles/index.scss";
 
 .atom-page-view {
+  min-height: 100vh;
   opacity: 0;
   transition: opacity 0.5s;
+  box-sizing: border-box;
 
   .page-view-content {
     @include safe-padding-bottom();
+  }
+
+  .page-view-header {
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: transparent;
   }
 
   .page-view-footer {

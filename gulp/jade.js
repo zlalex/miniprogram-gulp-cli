@@ -2,7 +2,7 @@ const gulp = require('gulp')
 const gulpNewer = require('gulp-newer')
 const gulpPlumber = require('gulp-plumber')
 const gulpPug = require('gulp-pug')
-const gulpHtmlmin = require('gulp-htmlmin')
+const gulpPrettyData = require('gulp-pretty-data')
 const gulpIf = require('gulp-if')
 const gulpRename = require('gulp-rename')
 
@@ -22,6 +22,6 @@ module.exports = function handleJade() {
     .pipe(gulpPlumber())
     .pipe(gulpPug({ pretty: true }))
     .pipe(gulpRename(fileRename))
-    .pipe(gulpIf(isBuild, gulpHtmlmin(htmlMinConfig)))
+    .pipe(gulpIf(isBuild, gulpPrettyData(htmlMinConfig)))
     .pipe(dest(filePath.jade.dest))
 }

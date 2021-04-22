@@ -1,7 +1,7 @@
 const gulp = require('gulp')
 const gulpNewer = require('gulp-newer')
 const gulpRename = require('gulp-rename')
-const gulpHtmlmin = require('gulp-htmlmin')
+const gulpPrettyData = require('gulp-pretty-data')
 const gulpIf = require('gulp-if')
 
 //
@@ -18,6 +18,6 @@ module.exports = function handleTemplate() {
   return src(filePath.template.src, { base: 'src' })
     .pipe(gulpNewer(filePath.template.dest))
     .pipe(gulpRename(fileRename))
-    .pipe(gulpIf(isBuild, gulpHtmlmin(htmlMinConfig)))
+    .pipe(gulpIf(isBuild, gulpPrettyData(htmlMinConfig)))
     .pipe(dest(filePath.template.dest))
 }
