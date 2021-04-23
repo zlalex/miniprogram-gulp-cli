@@ -3,6 +3,7 @@ import {
   createIntersectionObserver,
   createSelectorQuery
 } from '../utils/native/wechat-native-method'
+import getSystemInfo from '../utils/get-system-info'
 import propClassName from './prop-class-name'
 
 const __data__ = {
@@ -29,7 +30,7 @@ export default Behavior({
   methods: {
     getDeviceInfo() {
       if (__data__.app) { return }
-      __data__.app = wx.getSystemInfoSync()
+      __data__.app = getSystemInfo()
       __data__.deviceHeight = __data__.app.windowHeight
     },
 

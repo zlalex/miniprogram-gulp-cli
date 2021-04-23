@@ -1,4 +1,5 @@
 import { normalizeStyle } from '../utils/index'
+import getSystemInfo from '../utils/get-system-info'
 
 Component({
   properties: {
@@ -6,7 +7,7 @@ Component({
   },
   lifetimes: {
     attached() {
-      const { statusBarHeight, system } = wx.getSystemInfoSync()
+      const { statusBarHeight, system } = getSystemInfo()
       const isAndroid = !(/ios/i.test(system))
       const height = isAndroid ? 48 : 44
       const __navBarStyle = {

@@ -4,8 +4,8 @@
     </view>
     <view class="index-content" slot="content">
         <register-form bind:submit="handleRegisterFormSubmit"></register-form>
-        <sync-view prop-class="~min-view-height">
-            <view class="slot-view">sync-view-slot</view>
+        <sync-view wx:for="{{100}}" wx:key="index">
+            <view class="slot-view">sync-view-slot__{{item}}</view>
         </sync-view>
         <view style="min-height: 100vh;"></view>
         <sync-image prop-class="~min-view-height" url="//www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png">
