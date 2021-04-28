@@ -33,11 +33,11 @@ Component({
       const heightToPixel = [navBarClientHeight, 'px'].join('')
       const __insetNavBarStyle = { 'padding-top': heightToPixel }
       const __fixedHeaderStyle = { top: heightToPixel }
-
       this.setData({
         insetNavBarStyle: normalizeStyle(__insetNavBarStyle),
         fixedHeaderStyle: normalizeStyle(__fixedHeaderStyle)
       })
+      this.triggerEvent('pageOnReady', Object.assign({ navBarClientHeight }, this.data))
     }
   }
 })

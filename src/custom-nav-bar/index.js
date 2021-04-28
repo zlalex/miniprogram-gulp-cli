@@ -1,9 +1,10 @@
+import interfaceMap from '../utils/interface-map'
 import { normalizeStyle } from '../utils/index'
 import getSystemInfo from '../utils/get-system-info'
 
 Component({
   properties: {
-    navTitle: { type: String }
+    navTitle: interfaceMap.string('')
   },
   lifetimes: {
     attached() {

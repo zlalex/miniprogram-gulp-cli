@@ -1,10 +1,10 @@
-const time = 60 * 60 * 1000
+const TIME = 60 * 60 * 1000
 class Storage {
   constructor() { }
   set(key, value, date = 24) {
     const payload = {
       value,
-      offsetDate: date * time,
+      offsetDate: date * TIME,
       createDate: Date.now()
     }
     wx.setStorageSync(key, payload)
@@ -15,11 +15,9 @@ class Storage {
       const current = Date.now()
       const __offset = data.createDate + data.offsetDate
       const isOffset = __offset <= current
-      if (isOffset) {
-        wx.removeStorageSync(key)
-      } else {
-        return data.value
-      }
+      if (!isOffset) { return data.value }
+      wx.removeStorageSync(key)
+      return null
     }
     return null
   }

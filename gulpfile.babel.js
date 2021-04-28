@@ -5,9 +5,10 @@ const handleProject = require('./gulp/project')
 const handleTemplate = require('./gulp/template')
 const handleJade = require('./gulp/jade')
 const handleStyle = require('./gulp/style')
-const handleScript = require('./gulp/script')
 const handlePaste = require('./gulp/paste')
 const handleImage = require('./gulp/image')
+// TODO...
+// const handleScript = require('./gulp/script')
 
 //
 const { series, parallel } = gulp
@@ -22,8 +23,7 @@ export const build = series(
     handleStyle,
     handlePaste,
     handleImage
-  ),
-  handleScript
+  )
 )
 
 // gulp

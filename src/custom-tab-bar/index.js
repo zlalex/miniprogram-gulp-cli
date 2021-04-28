@@ -1,4 +1,4 @@
-const tabBarConfig = [
+const __tabBarConfig__ = [
   {
     name: 'category',
     text: '分类',
@@ -24,7 +24,7 @@ const tabBarConfig = [
 
 Component({
   data: {
-    tabBarConfig,
+    tabBarConfig: __tabBarConfig__,
     activePath: ''
   },
   methods: {

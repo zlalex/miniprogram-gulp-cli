@@ -1,3 +1,19 @@
 .atom-confirm {
   display: flex;
+  width: 100%;
+
+  .atom-confirm-container {
+    width: 100%;
+  }
+
+  .confirm-footer {
+    display: flex;
+    width: 100%;
+    text-align: center;
+  }
+
+  .confirm-cancel,
+  .confirm-button {
+    flex: 1;
+  }
 }

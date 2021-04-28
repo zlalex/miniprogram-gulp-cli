@@ -41,7 +41,7 @@ export default Behavior({
       if (this.data.isMounted) { return }
       const rect = await createSelectorQuery.call(this, viewClassName)
       const { top, height } = rect
-      const isInDeviceView = top < deviceHeight && (top + height) > 0
+      const isInDeviceView = top < deviceHeight && (top + height) > 0 || top < 0
       if (isInDeviceView) { return this.handleViewMount() }
       createIntersectionObserver.call(this, viewClassName, { top: top - deviceHeight }, data => {
         !this.data.isMounted && this.handleViewMount()

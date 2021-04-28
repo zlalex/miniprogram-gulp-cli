@@ -1,3 +1,18 @@
-<view class="atom-confirm">
+<atom-popup class="atom-confirm" position="center" visible="{{scopeVisible}}" animate="slideUp" ext-class="atom-confirm" data-type="cancel" bind:close="handleConfirmEvent">
+  <view class="atom-confirm-container">
+    <view class="confirm-content">
+      <slot></slot>
+    </view>
 
-</view>
+    <view class="confirm-footer">
+      <block wx:if="{{insetFooter}}">
+        <slot name="footer"></slot>
+      </block>
+
+      <block wx:else>
+        <view class="confirm-cancel" data-type="cancel" bind:tap="handleConfirmEvent">{{cancelText}}</view>
+        <view class="confirm-button" data-type="confirm" bind:tap="handleConfirmEvent">{{confirmText}}</view>
+      </block>
+    </view>
+  </view>
+</atom-popup>

@@ -1,7 +1,8 @@
 Page({
   data: {
     registerFormData: {},
-    mount: false
+    mount: false,
+    popupVisible: false
   },
   onLoad() {
     setTimeout(() => {
@@ -14,11 +15,19 @@ Page({
     const { detail } = event
     const { validate, formData } = detail
     this.setData({ registerFormData: formData })
-    console.log(validate, formData)
-    if (!validate) { return }
+    this.setData({ popupVisible: true })
 
-    wx.navigateTo({
-      url: '/pages/member/member'
-    })
+    if (!validate) { return }
+    // wx.navigateTo({
+    //   url: '/pages/member/member'
+    // })
+  },
+  handleClosePopup() {
+    this.setData({ popupVisible: false })
+  },
+  handleConfirmCancel() { console.log('cancel') },
+  handleConfirm() { console.log('confirm') },
+  handleConfirmTap(){
+    this.handleClosePopup()
   }
 })

@@ -5,9 +5,7 @@ export default Behavior({
     value: {
       type: String,
       observer(value) {
-        const __event = {
-          detail: { value }
-        }
+        const __event = { detail: { value } }
         this.updateModel(__event)
       }
     }
@@ -28,7 +26,6 @@ export default Behavior({
       // 然后校验值是否必填 is-required
       const isError = __value ? !validate(__value) : false
       const isRequired = this.properties.require ? !!__value : true
-
       this.setData({ isError, isRequired })
       this.triggerEvent('validate', { isError, isRequired })
       return !isError && isRequired

@@ -1,3 +1,6 @@
-<view class="atom-popup" wx:if="{{visible}}">
-
+<view class="atom-popup atom-popup-{{position}} {{propClass || ''}} {{scopeVisible ? '' : 'hidden'}}" style="z-index:{{zIndex}};">
+  <view class="popup-mask {{animateClassNames[1]}}" bind:touchmove="noop" bind:tap="handleCloseMaskByMask"></view>
+  <view class="popup-content ext-class {{animateClassNames[0]}}" bind:touchmove="noop">
+    <slot></slot>
+  </view>
 </view>

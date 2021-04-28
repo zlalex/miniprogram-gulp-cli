@@ -10,6 +10,7 @@
     "atom-button": "component-atom/button/index",
     "atom-input": "component-atom/input/index",
     "atom-popup": "component-atom/popup/index",
+    "atom-confirm": "component-atom/confirm/index",
     "sync-view": "component-atom/sync-view/index",
     "sync-image": "component-atom/sync-image/index",
     "page-view": "component-atom/page-view/index",

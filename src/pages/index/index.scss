@@ -1,7 +1,14 @@
+@import "../../styles/index.scss";
 .page-index {
   min-height: 100vh;
   background: steelblue;
+
   .min-view-height {
     height: 20vh;
   }
+}
+.index-popup {
+  height: 20vh;
+  @include safe-padding-bottom($tab-bar-height);
+  box-sizing: border-box;
 }

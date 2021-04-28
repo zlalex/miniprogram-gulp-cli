@@ -1,4 +1,4 @@
-<view class="component-atom-input {{propClass}}">
+<view class="component-atom-input {{propClass || ''}}">
   <view class="atom-input-layout">
     <view class="atom-input-label">{{label}}</view>
     <view class="atom-input-readonly" wx:if="{{readonly}}">{{scopeValue}}</view>

@@ -1,7 +1,7 @@
+@import "../../styles/index.scss";
+
 .atom-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-box(center, center);
   font-size: 24rpx;
   line-height: 64rpx;
   text-align: center;

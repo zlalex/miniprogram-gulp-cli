@@ -1,3 +1,50 @@
+@import '../../styles/animate.scss';
+
 .atom-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
   display: flex;
+  overflow: hidden;
+  visibility: inherit;
+  opacity: 1;
+
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &.atom-popup-top {
+    align-items: flex-start;
+  }
+
+  &.atom-popup-bottom {
+    align-items: flex-end;
+  }
+
+  &.atom-popup-left {
+    justify-content: flex-start;
+  }
+
+  &.atom-popup-right {
+    justify-content: flex-end;
+  }
+
+  &.atom-popup-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .3);
+  }
+
+  .popup-content {
+    width: auto;
+    background-color: transparent;
+  }
 }
