@@ -13,27 +13,22 @@ const __data__ = {
 
 export default Behavior({
   behaviors: [propClassName],
-
   data: {
     isMounted: false,
     viewClassName: ''
   },
-
   attached() {
     this.handleViewBeforeMounted()
   },
-
   detached() {
     this.handleViewDestroyed()
   },
-
   methods: {
     getDeviceInfo() {
       if (__data__.app) { return }
       __data__.app = getSystemInfo()
       __data__.deviceHeight = __data__.app.windowHeight
     },
-
     async handleViewBeforeMounted() {
       this.getDeviceInfo()
       const { deviceHeight } = __data__
@@ -47,11 +42,9 @@ export default Behavior({
         !this.data.isMounted && this.handleViewMount()
       })
     },
-
     handleViewMount() {
       this.setData({ isMounted: true })
     },
-
     handleViewDestroyed() { }
   }
 })
