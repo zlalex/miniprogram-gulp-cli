@@ -1,18 +1,15 @@
 import interfaceMap from '../../utils/interface-map'
 
 Component({
-  options: {
-    multipleSlots: true
-  },
+  options: { multipleSlots: true },
+  externalClasses: ['ext-class'],
   properties: {
     visible: interfaceMap.boolean(false, 'handleConfirmVisible'),
     insetFooter: interfaceMap.boolean(false), // 是否自定义弹窗底部
     cancelText: interfaceMap.string('取消'),
     confirmText: interfaceMap.string('确认')
   },
-  data: {
-    scopeVisible: false
-  },
+  data: { scopeVisible: false },
   methods: {
     handleConfirmVisible(visible) {
       this.setData({ scopeVisible: visible })

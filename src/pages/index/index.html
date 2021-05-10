@@ -1,13 +1,10 @@
-<atom-confirm visible="{{popupVisible}}" inset-footer cancel-text="残忍离开" confirm-text="加油哦"
+<atom-confirm visible="{{popupVisible}}" cancel-text="残忍离开" confirm-text="加油哦"
     bind:cancel="handleConfirmCancel" bind:confirm="handleConfirm">
     <view>content</view>
-    <view slot="footer" bind:tap="handleClosePopup">footer</view>
 </atom-confirm>
 
-<page-view prop-class="~page-index" mount="{{mount}}" fixed-footer inset-tab-bar inset-nav-bar title="首页">
-    <view class="index-header" slot="header">
-        header
-    </view>
+<page-view prop-class="~page-index" mount="{{mount}}" fixed-footer fixed-header inset-tab-bar inset-nav-bar title="绝情坑">
+    <view class="index-header" slot="header"> header </view>
     <view class="index-content" slot="content">
         <register-form bind:submit="handleRegisterFormSubmit"></register-form>
         <view style="min-height: 100vh;"></view>

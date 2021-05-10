@@ -1,8 +1,5 @@
 <page-view prop-class="~page-home" mount fixed-footer inset-tab-bar>
   <view slot="content">
-    home
-    <sync-view wx:for="{{100}}" wx:key="index">
-        <view class="slot-view">sync-view-slot__{{item}}</view>
-    </sync-view>
+    <view bind:tap="getLocation">home</view>
   </view>
 </page-view>

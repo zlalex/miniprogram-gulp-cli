@@ -1,3 +1,5 @@
+import getLocationSync from '../../utils/native/get-location-sync'
+
 Page({
   data: {
     registerFormData: {},
@@ -22,12 +24,14 @@ Page({
     //   url: '/pages/member/member'
     // })
   },
-  handleClosePopup() {
+  async handleClosePopup() {
+    const location = await getLocationSync()
+    console.log(location, 'location')
     this.setData({ popupVisible: false })
   },
   handleConfirmCancel() { console.log('cancel') },
   handleConfirm() { console.log('confirm') },
-  handleConfirmTap(){
+  handleConfirmTap() {
     this.handleClosePopup()
   }
 })

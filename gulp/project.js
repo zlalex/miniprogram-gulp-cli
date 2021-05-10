@@ -1,4 +1,3 @@
-
 const OS = require('os')
 const gulp = require('gulp')
 const gulpEditor = require('gulp-json-editor')

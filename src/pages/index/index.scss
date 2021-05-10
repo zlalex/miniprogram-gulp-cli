@@ -1,4 +1,5 @@
 @import "../../styles/index.scss";
+
 .page-index {
   min-height: 100vh;
   background: steelblue;
@@ -6,7 +7,22 @@
   .min-view-height {
     height: 20vh;
   }
+
+  .index-header {
+    height: 50rpx;
+    background-color: chocolate;
+  }
+
+  .index-footer {
+    text-align: center;
+    color: #fff;
+  }
+
+  .index-content {
+    padding-top: 50rpx;
+  }
 }
+
 .index-popup {
   height: 20vh;
   @include safe-padding-bottom($tab-bar-height);

@@ -38,6 +38,11 @@
     "navigationBarTitleText": "miniprogram",
     "navigationBarTextStyle": "black"
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取用户地理位置信息"
+    }
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
