@@ -9,7 +9,7 @@ import isInvoiceNumber from './is-invoice-number'
 import isNumber from './is-number'
 import isPhoneNumber from './is-phone-number'
 import { isSpace, trimSpace, replaceSpace } from './trim-space'
-import typeofDatum from './typeof-datum'
+import typeofValue from './type-of-value'
 
 export default {
   isChineseName,
@@ -26,5 +26,5 @@ export default {
   trimSpace,
   replaceSpace,
   replaceEmoji,
-  ...typeofDatum
+  ...typeofValue
 }

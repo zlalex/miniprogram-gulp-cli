@@ -11,9 +11,7 @@ class TokenManage {
   }
   async get() {
     const token = storageManage.getToken()
-    if (token) {
-      return token
-    }
+    if (token) { return token }
     if (this.status) {
       // TODO..
       const result = await new Promise((resolve, reject) => {
@@ -31,8 +29,7 @@ class TokenManage {
       const { data } = response
       data && this.complete('success', response)
       return data.token
-    } catch (error) {
-      console.error(error)
+    } catch (e) {
       this.complete('fail', error)
       return null
     }
@@ -44,9 +41,7 @@ class TokenManage {
     storageManage.cleanToken()
   }
   async refresh() {
-    if (this.count > this.maxCount) {
-      return
-    }
+    if (this.count > this.maxCount) { return }
     if (!this.count) {
       setTimeout(() => {
         this.count = 0

@@ -1,4 +1,4 @@
-export const createSelectorQuery = function (view) {
+export default function createSelectorQuery (view) {
   return new Promise(resolve => {
     if (!this) throw new Error('createSelectorQuery.call(this, view)')
     try {
@@ -19,17 +19,4 @@ export const createSelectorQuery = function (view) {
       resolve({})
     }
   })
-}
-
-export const createIntersectionObserver = function (view, options = {}, callback) {
-  if (!this) throw new Error('createIntersectionObserver(view, options)')
-  const isFunction = 'function' === (typeof callback)
-  try {
-    const observe = this.createIntersectionObserver()
-    observe.relativeToViewport(options).observe(view, response => {
-      isFunction && callback(response)
-    })
-  } catch (e) {
-    isFunction && callback(response)
-  }
 }

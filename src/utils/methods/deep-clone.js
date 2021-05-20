@@ -1,6 +1,4 @@
-import typeofDatum from '../../validates/typeof-datum'
-
-const { isArray, isObject } = typeofDatum
+import { isArray, isObject } from '../../validates/index'
 
 export default function deepClone(target) {
   var result
