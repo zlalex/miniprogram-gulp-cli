@@ -16,7 +16,7 @@ class RequestInterceptor {
     options.header.token = token || ''
     return options
   }
-  checkDeviceNetwork(options) {
+  async checkDeviceNetwork(options) {
     const { networkType } = await wx.$getNetworkType()
     const message = networkTypeMap[networkType]
     if (message && !status) {
@@ -54,7 +54,7 @@ class ResponseInterceptor {
       errorMessages.unshift(result.errMsg)
     }
     this.checkResponseCode(params.url)
-    return result
+    throw new Error(errorMessages.join(' .'))
   }
   checkResponseCode() {
     // TODO...

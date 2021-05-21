@@ -1,33 +1,31 @@
-import requestInterceptor from './request-interceptor'
+import __requestInterceptor__ from './request-interceptor'
 import combineRequestUrl from '../utils/methods/combine-request-url'
 import config from '../config'
 
 const { BASE_URL } = config
-const request = {
-  beforeHooks: [],
-  afterHooks: [],
-  async send(params) {
-    const options = Object.assign({}, params)
-    options.url = combineRequestUrl(BASE_URL, params.url)
-    const wechatRequestOption = await this.insetBeforeHook(options)
-    try {
-      const result = await wx.$request(wechatRequestOption)
-      return result
-    } catch (error) {
-      const isTimeout = error.errMsg == 'request:fail timeout' ||
-        error.errMsg == 'request:fail request unknown host error' ||
-        error.errMsg == 'request:fail request connect error'
-      if (isTimeout) { wx.showToast({ title: '网络请求超时，请稍后再试~', icon: 'none' }) }
-      const result = await this.insetAfterHook(options, error)
-      return result
-    }
-  },
-  insetBeforeHook(options) {
+const { requestInterceptor, responseInterceptor } = __requestInterceptor__
+const requestFailMessage = [
+  'request:fail timeout',
+  'request:fail request unknown host error',
+  'request:fail request connect error'
+]
 
-  },
-  insetAfterHook(options) {
-
+async function wechatRequest(params) {
+  const options = Object.assign({}, params)
+  options.url = combineRequestUrl(BASE_URL, params.url)
+  // TODO... insetRequestBeforeHook
+  const wechatRequestOption = await requestInterceptor.checkDeviceNetwork(options)
+  if (!wechatRequestOption.allowNoToken) {
+    requestInterceptor.setToken(wechatRequestOption)
+  }
+  try {
+    return (await wx.$request(wechatRequestOption))
+  } catch (error) {
+    const isTimeout = requestFailMessage.some(item => item === error.errMsg)
+    if (isTimeout) { wx.showToast({ title: '网络请求超时，请稍后再试~', icon: 'none' }) }
+    // TODO... insetRequestAfterHook
+    return responseInterceptor.handleRequestError(options, error)
   }
 }
 
-export default request
+export default wechatRequest

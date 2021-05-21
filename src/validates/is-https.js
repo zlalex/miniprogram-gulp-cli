@@ -5,4 +5,4 @@ const isHTTP = value => {
   return result
 }
 
-return isHTTP
+export default isHTTP

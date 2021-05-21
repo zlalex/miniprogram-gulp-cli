@@ -1,4 +1,4 @@
-import isHTTPS from '../validates/is-https'
+import isHTTPS from '../../validates/is-https'
 
 const combineRequestUrl = (baseUrl, requestUrl) => {
   if (isHTTPS(requestUrl)) { return requestUrl }

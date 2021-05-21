@@ -4,5 +4,7 @@ import config from '../config'
 const { WECHAT_ID } = config
 
 export default {
-  onLoginAsync() { }
+  onLoginAsync() {
+    console.log(request, WECHAT_ID)
+  }
 }

@@ -1,4 +1,5 @@
 import getLocationSync from '../../utils/native/get-location-sync'
+import request from '../../request/index'
 
 Page({
   data: {
@@ -7,6 +8,7 @@ Page({
     popupVisible: false
   },
   onLoad() {
+    console.log(request)
     setTimeout(() => {
       this.setData({
         mount: true
