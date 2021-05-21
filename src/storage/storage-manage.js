@@ -11,7 +11,7 @@ export default {
   getToken() {
     return storage.get(__('TOKEN'))
   },
-  cleanToken() {
-    storage.clean(__('TOKEN'))
+  clearToken() {
+    storage.clear(__('TOKEN'))
   }
 }

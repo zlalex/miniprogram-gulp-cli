@@ -1,6 +1,6 @@
 import createIntersectionObserver from '../utils/native/create-intersection-observer'
 import createSelectorQuery  from '../utils/native/create-selector-query'
-import getSystemInfo from '../utils/get-system-info'
+import getSystemInfo from '../utils/native/get-system-info'
 import propClassName from './prop-class-name'
 
 const __data__ = {

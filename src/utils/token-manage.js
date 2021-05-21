@@ -13,7 +13,7 @@ class TokenManage {
     const token = storageManage.getToken()
     if (token) { return token }
     if (this.status) {
-      // TODO..
+      // TODO..?
       const result = await new Promise((resolve, reject) => {
         this.queueCallbacks.push({
           resolve,
@@ -37,8 +37,8 @@ class TokenManage {
   set(value) {
     storageManage.setToken(value)
   }
-  clean() {
-    storageManage.cleanToken()
+  clear() {
+    storageManage.clearToken()
   }
   async refresh() {
     if (this.count > this.maxCount) { return }

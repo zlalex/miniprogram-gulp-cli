@@ -1,6 +1,7 @@
 import isChineseName from './is-chinese-name'
 import isConstantCode from './is-constant-code'
 import isDateString from './is-date-string'
+import isHTTPS from './is-https'
 import isEmail from './is-email'
 import { isEmoji, replaceEmoji } from './is-emoji'
 import isEnWordAllowSpace from './is-en-word-allow-space'
@@ -24,6 +25,7 @@ export default {
   isPhoneNumber,
   isSpace,
   trimSpace,
+  isHTTPS,
   replaceSpace,
   replaceEmoji,
   ...typeofValue

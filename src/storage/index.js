@@ -30,7 +30,7 @@ class Storage {
       wx.removeStorageSync(key)
     })
   }
-  clean(key) {
+  clear(key) {
     safeCall(() => {
       wx.clearStorageSync(key)
     })

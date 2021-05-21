@@ -1,8 +1,8 @@
 const __data__ = {}
-export default function () {
+export default function (refresh = false) {
   return new Promise(resolve => {
     try {
-      if (__data__.location) {
+      if (!refresh && __data__.location) {
         resolve(__data__.location)
         return
       }

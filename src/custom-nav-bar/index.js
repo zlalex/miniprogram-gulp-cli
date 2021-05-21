@@ -1,6 +1,6 @@
 import interfaceMap from '../utils/interface-map'
 import { normalizeStyle } from '../utils/index'
-import getSystemInfo from '../utils/get-system-info'
+import getSystemInfo from '../utils/native/get-system-info'
 
 Component({
   properties: {
