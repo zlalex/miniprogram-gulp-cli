@@ -59,7 +59,6 @@ class TokenManage {
         return
       }
       const { token } = response.data
-      console.log(response)
       storageManage.setUserInfo(response.data)
       this.set(token)
       return response

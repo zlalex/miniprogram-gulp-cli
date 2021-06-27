@@ -11,7 +11,11 @@ App({
       safeCallback(async () => {
         await tokenManage.get()
         const { unionid } = storageManage.getUserInfo()
-        await api.getMemberAsync(unionid)
+        const response = await api.getMemberAsync(unionid)
+        if (response.resultCode == 1) {
+          const memberInfo = response.data
+          storageManage.setMemberInfo(memberInfo)
+        }
         resolve()
       })
     })
