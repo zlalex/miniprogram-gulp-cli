@@ -1,8 +1,8 @@
 module.exports = {
   "APP_ID": "",
-  "DOMAIN": "uat/",
-  "BASE_URL": "uat/api/v4/",
+  "DOMAIN": "https://vans-stg-estore.d1mgroup.com",
+  "BASE_URL": "https://vans-stg-estore.d1mgroup.com/api/v4/",
   "TEMPLATE_ID": [],
   "ENV": "uat",
-  "WECHAT_ID": 106
+  "WECHAT_ID": 208
 }

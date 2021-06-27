@@ -2,7 +2,7 @@
 
 .page-index {
   min-height: 100vh;
-  background: steelblue;
+  background: transparent;
 
   .min-view-height {
     height: 20vh;
@@ -10,12 +10,12 @@
 
   .index-header {
     height: 50rpx;
-    background-color: chocolate;
+    background-color: transparent;
   }
 
   .index-footer {
     text-align: center;
-    color: #fff;
+    color: #444;
   }
 
   .index-content {

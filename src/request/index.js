@@ -8,11 +8,11 @@ class Request {
     methods.forEach(method => {
       this[method] = async function (params) {
         let options = { method }
-        if(isObject(params)){
-          options = Object(options,params)
-        }else if(isString(params)){
+        if (isObject(params)) {
+          Object.assign(options, params)
+        } else if (isString(params)) {
           options.url = params
-          if(arguments.length === 2){
+          if (arguments.length === 2) {
             options.data = arguments[1]
           }
         }

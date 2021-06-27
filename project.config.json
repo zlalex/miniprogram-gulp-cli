@@ -40,8 +40,8 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.16.0",
-  "appid": "wx43e5fa1d669550d4",
+  "libVersion": "2.17.0",
+  "appid": "wxc7f2c1845f1a51f3",
   "projectname": "wechat-store",
   "miniprogramRoot": "dist/app/",
   "debugOptions": {

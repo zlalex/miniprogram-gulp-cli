@@ -1,7 +1,17 @@
 .component-atom-input {
   display: block;
-
   .atom-input__standard {
     display: block;
+    height: 46rpx;
+    border: 2rpx solid #e1e1e1;
+    line-height: 50rpx;
+  }
+  .atom-input-label {
+    font-size: 30rpx;
+    line-height: 50rpx;
+  }
+  .atom-input-layout {
+    display: flex;
+    justify-content: space-between;
   }
 }

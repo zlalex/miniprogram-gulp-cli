@@ -4,6 +4,5 @@ Page({
   },
   async getLocation(){
     const location = await getLocationSync()
-    console.log(location, 'home location')
   }
 })

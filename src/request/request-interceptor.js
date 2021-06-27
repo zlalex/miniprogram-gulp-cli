@@ -1,4 +1,4 @@
-import { tokenManage } from '../utils/index'
+import tokenManage from '../utils/token-manage'
 
 // scope data
 const FIVE_MIN = 5 * 60 * 1e3

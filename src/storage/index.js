@@ -12,18 +12,16 @@ class Storage {
     })
   }
   get(key) {
-    return safeCall(() => {
-      const data = wx.getStorageSync(key)
-      if (data && data.createDate && data.offsetDate) {
-        const current = Date.now()
-        const __offset = data.createDate + data.offsetDate
-        const isOffset = __offset <= current
-        if (!isOffset) { return data.value }
-        wx.removeStorageSync(key)
-        return null
-      }
+    const data = wx.getStorageSync(key)
+    if (data && data.createDate && data.offsetDate) {
+      const current = Date.now()
+      const __offset = data.createDate + data.offsetDate
+      const isOffset = __offset <= current
+      if (!isOffset) { return data.value }
+      wx.removeStorageSync(key)
       return null
-    })
+    }
+    return null
   }
   remove(key) {
     safeCall(() => {

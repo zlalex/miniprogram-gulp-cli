@@ -1,6 +1,7 @@
+import tokenManage from '../../utils/token-manage'
 import getLocationSync from '../../utils/native/get-location-sync'
-import request from '../../request/index'
 
+const app = getApp()
 Page({
   data: {
     registerFormData: {},
@@ -8,12 +9,13 @@ Page({
     popupVisible: false
   },
   onLoad() {
-    console.log(request)
-    setTimeout(() => {
-      this.setData({
-        mount: true
-      })
-    }, 1e3)
+    this.syncOnLoad()
+  },
+  syncOnLoad() {
+    app.syncOnLaunch.then(async () => {
+      const token = await tokenManage.get()
+      this.setData({ mount: true })
+    })
   },
   handleRegisterFormSubmit(event) {
     const { detail } = event
@@ -28,11 +30,10 @@ Page({
   },
   async handleClosePopup() {
     const location = await getLocationSync()
-    console.log(location, 'location')
     this.setData({ popupVisible: false })
   },
-  handleConfirmCancel() { console.log('cancel') },
-  handleConfirm() { console.log('confirm') },
+  handleConfirmCancel() { },
+  handleConfirm() { },
   handleConfirmTap() {
     this.handleClosePopup()
   }

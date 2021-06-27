@@ -20,7 +20,7 @@
     &.active {
 
       .item-image {
-        background-color: red;
+        background-color: #fff;
       }
 
       .tab-item-text {
@@ -33,10 +33,10 @@
     display: block;
     width: 40rpx;
     height: 40rpx;
-    background-color: hotpink;
+    background-color: transparent;
   }
 
   .tab-item-text {
-    color: #999;
+    color: #444;
   }
 }

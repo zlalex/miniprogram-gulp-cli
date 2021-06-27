@@ -1,17 +1,17 @@
 .page-home {
   &.trigger {
     .icon-wrapper {
-      background: cornflowerblue;
+      background: transparent;
     }
     .atom-icon {
       color: #fff;
     }
   }
   .icon-wrapper {
-    background: chocolate;
+    background: transparent;
   }
   .atom-icon {
-    color: #333;
+    color: #444;
   }
   .input-border {
     border: 2rpx solid red;

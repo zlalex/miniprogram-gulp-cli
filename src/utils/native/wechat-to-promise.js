@@ -1,5 +1,6 @@
-import { isFunction } from '../../validates/index'
+import validates from '../../validates/index'
 
+const { isFunction } = validates
 for (const key in wx) {
   const wechatMethod = wx[key]
   const isSyncMethod = key.toLocaleLowerCase().includes('sync')
