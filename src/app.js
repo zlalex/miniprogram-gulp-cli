@@ -12,9 +12,11 @@ App({
         await tokenManage.get()
         const { unionid } = storageManage.getUserInfo()
         const response = await api.getMemberAsync(unionid)
-        if (response.resultCode == 1) {
+        const __response = await api.getMemberPointAsync(unionid)
+        if (response.resultCode == 1 && __response.resultCode == 1) {
           const memberInfo = response.data
-          storageManage.setMemberInfo(memberInfo)
+          const memberPoint = __response.data
+          storageManage.setMemberInfo({ memberInfo, memberPoint })
         }
         resolve()
       })

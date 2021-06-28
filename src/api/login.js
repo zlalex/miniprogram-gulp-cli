@@ -13,9 +13,17 @@ export default {
   },
   async getMemberAsync(param) {
     const params = { param, type: 2 }
-    const result =  await request.get({
+    const result = await request.get({
       data: params,
       url: `${config.DOMAIN}/vans/vans-clm/member/query?wechatId=${WECHAT_ID}`
+    })
+    return result
+  },
+  async getMemberPointAsync(unionID) {
+    const params = { param: unionID, type: 2 }
+    const result = await request.get({
+      data: params,
+      url: `${config.DOMAIN}/vans/vans-clm/member/points?wechatId=${WECHAT_ID}`
     })
     return result
   }
