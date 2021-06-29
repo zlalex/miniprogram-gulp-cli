@@ -11,18 +11,18 @@ const isBuild = require('../build/build-program.js')
 // main
 const { src, dest } = gulp
 const fileRename = file => (file.extname = '.wxss')
-const toBase64 = () => gulpBase64({
-  exclude: [/http/, '--live.jpg'],
-  extensions: ['svg', 'png', /\.jpg#datauri$/i],
-  deleteAfterEncoding: isBuild
-})
+// const toBase64 = () => gulpBase64({
+//   exclude: [/http/, '--live.jpg'],
+//   extensions: ['svg', 'png', /\.jpg#datauri$/i],
+//   deleteAfterEncoding: isBuild
+// })
 
 // 编译压缩CSS
 module.exports = function handleStyle() {
   return src(filePath.styles.src, { base: 'src' })
     .pipe(gulpNewer(filePath.styles.dest))
     .pipe(gulpSass())
-    .pipe(gulpIf(isBuild, toBase64))
+    // .pipe(gulpIf(isBuild, toBase64))
     .pipe(gulpIf(isBuild, gulpCleanCSS()))
     .pipe(gulpRename(fileRename))
     .pipe(dest(filePath.styles.dest))

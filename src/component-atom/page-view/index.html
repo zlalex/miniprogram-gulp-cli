@@ -1,6 +1,6 @@
 <wxs src="../../wxs/atom-page-view.wxs" module="_" />
 <custom-nav-bar wx:if="{{insetNavBar}}" bind:navBarMounted="handleNavBarMounted" nav-title="{{title}}"></custom-nav-bar>
-<view class="atom-page-view {{_.computedClassName(mount, insetTabBar, normal, propClass)}}" style="{{insetNavBarStyle}}">
+<scroll-view scroll-y class="atom-page-view {{_.computedClassName(mount, insetTabBar, normal, propClass)}}" style="{{insetNavBarStyle}}">
   <view class="page-view-header" wx:if="{{fixedHeader}}" style="{{fixedHeaderStyle}}">
     <slot name="header"></slot>
   </view>
@@ -10,4 +10,4 @@
   <view class="page-view-footer" wx:if="{{fixedFooter}}">
     <slot name="footer"></slot>
   </view>
-</view>
+</scroll-view>

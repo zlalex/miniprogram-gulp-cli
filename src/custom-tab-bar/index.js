@@ -20,6 +20,13 @@ const __tabBarConfig__ = [
     defaultIconPath: '',
     activeIconPath: ''
   },
+  {
+    name: 'member',
+    text: '我的',
+    path: 'pages/member/member',
+    defaultIconPath: '',
+    activeIconPath: ''
+  }
 ]
 
 Component({

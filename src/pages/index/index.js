@@ -1,5 +1,6 @@
 import tokenManage from '../../utils/token-manage'
 import getLocationSync from '../../utils/native/get-location-sync'
+import api from '../../api/index'
 
 const app = getApp()
 Page({
@@ -16,6 +17,8 @@ Page({
       const token = await tokenManage.get()
       this.setData({ mount: true })
     })
+    console.log(api.indexKoaAsync)
+    api.indexKoaAsync()
   },
   handleRegisterFormSubmit(event) {
     const { detail } = event

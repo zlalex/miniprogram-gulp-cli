@@ -1,10 +1,11 @@
 @import "../../styles/index.scss";
 
 .atom-page-view {
-  min-height: 100vh;
+  height: 100vh;
   opacity: 0;
   transition: opacity 0.5s;
   box-sizing: border-box;
+  overflow: hidden;
 
   .page-view-content {
     @include safe-padding-bottom();

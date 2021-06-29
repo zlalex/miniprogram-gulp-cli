@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/home/home",
     "pages/category/category",
-    "pages/member/member"
+    "pages/member/member",
+    "pages/active/active"
   ],
   "usingComponents": {
     "atom-icon": "component-atom/icon/index",
@@ -29,6 +30,9 @@
       },
       {
         "pagePath": "pages/index/index"
+      },
+      {
+        "pagePath": "pages/member/member"
       }
     ]
   },
