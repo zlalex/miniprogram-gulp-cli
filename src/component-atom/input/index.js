@@ -13,10 +13,6 @@ Component({
     placeholder: { type: String },
     maxlength: { type: String, value: '250' }
   },
-  data: {
-    isError: false,
-    isRequired: true
-  },
   methods: {
     handleChange(e) {
       const value = this.updateModel(e, true)

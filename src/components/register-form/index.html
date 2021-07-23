@@ -1,8 +1,9 @@
 <view class="component-register-form">
-  <atom-input id="user-name" ext-class="user-name form-input-item" prop-class="^prop-class" validation="{{userNameRule}}" require="{{true}}"
+  <!-- TODO... 提交时校验 检验toast 多场景业务-->
+  <atom-input id="user-name" ext-class="user-name form-input-item" prop-class="^prop-class" validations="{{userNameRule}}" require="{{true}}"
     label="用户名：" value="{{formData.userName}}" placeholder="请输入姓名" data-name="userName" bind:input="handleFormChange">
   </atom-input>
-  <atom-input id="email" ext-class="user-email form-input-item" prop-class="^prop-class" validation="{{emailRule}}" require="{{false}}"
+  <atom-input id="email" ext-class="user-email form-input-item" prop-class="^prop-class" validations="{{emailRule}}" require="{{false}}"
     label="邮箱：" value="{{formData.email}}" placeholder="请输入邮箱" data-name="email" bind:input="handleFormChange">
   </atom-input>
   <atom-button bind:tap="handleFormSubmit">提交</atom-button>

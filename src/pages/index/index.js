@@ -1,7 +1,3 @@
-import tokenManage from '../../utils/token-manage'
-import getLocationSync from '../../utils/native/get-location-sync'
-import api from '../../api/index'
-
 const app = getApp()
 Page({
   data: {
@@ -14,11 +10,8 @@ Page({
   },
   syncOnLoad() {
     app.syncOnLaunch.then(async () => {
-      const token = await tokenManage.get()
       this.setData({ mount: true })
     })
-    console.log(api.indexKoaAsync)
-    api.indexKoaAsync()
   },
   handleRegisterFormSubmit(event) {
     const { detail } = event
@@ -27,12 +20,9 @@ Page({
     this.setData({ popupVisible: true })
 
     if (!validate) { return }
-    // wx.navigateTo({
-    //   url: '/pages/member/member'
-    // })
+    // api
   },
   async handleClosePopup() {
-    const location = await getLocationSync()
     this.setData({ popupVisible: false })
   },
   handleConfirmCancel() { },

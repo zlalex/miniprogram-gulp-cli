@@ -32,7 +32,8 @@ const __tabBarConfig__ = [
 Component({
   data: {
     tabBarConfig: __tabBarConfig__,
-    activePath: ''
+    activePath: '',
+    visible: true
   },
   methods: {
     handleTabItemActive(e) {
@@ -40,6 +41,11 @@ Component({
       const { path } = item
       const url = ['/', path].join('')
       wx.switchTab({ url })
+    },
+    triggerVisibleTabBar(){
+      this.setData({
+        visible: !this.data.visible
+      })
     }
   }
 })

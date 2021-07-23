@@ -24,10 +24,10 @@ export default Behavior({
         this.setData({ visible: false })
         __data__.timer = setTimeout(() => {
           this.setData({ scopeVisible: false })
+          this.triggerEvent('close')
         }, defer);
       }
       this.setData(params)
-      !isHidden && this.triggerEvent('close')
     }
   }
 })

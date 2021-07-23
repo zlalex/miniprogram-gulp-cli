@@ -1,8 +1,15 @@
-import getLocationSync from '../../utils/native/get-location-sync'
 Page({
-  onLoad() {
+  data: {
+    visiblePopup: false,
+    submitCategories: []
   },
-  async getLocation(){
-    const location = await getLocationSync()
-  }
+  handleFilterCategory(event) {
+    this.setData({ submitCategories: event.detail })
+    this.visibleFilterPopup()
+  },
+  visibleFilterPopup() {
+    this.setData({ visiblePopup: !this.data.visiblePopup }, () => {
+      this.getTabBar().triggerVisibleTabBar()
+    })
+  },
 })
