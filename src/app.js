@@ -9,12 +9,12 @@ App({
   onLaunch() {
     this.syncOnLaunch = new Promise((resolve) => {
       safeCallback(async () => {
-        await this.handleOnLaunched()
+        // await this.getUserInfoAndMemberInfo()
         resolve()
       })
     })
   },
-  async handleOnLaunched(){
+  async getUserInfoAndMemberInfo(){
     await tokenManage.get()
     const { unionid } = storageManage.getUserInfo()
     const response = await api.getMemberAsync(unionid)

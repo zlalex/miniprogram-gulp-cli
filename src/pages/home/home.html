@@ -1,5 +1,6 @@
+<category-filter-popup visible="{{visiblePopup}}" selected-categories="{{submitCategories}}" bind:confirm="handleFilterCategory" bind:cancel="visibleFilterPopup"></category-filter-popup>
 <page-view prop-class="~page-home" mount fixed-footer inset-tab-bar>
   <view slot="content">
-    <view bind:tap="getLocation">home</view>
+    <view class="button" bind:tap="visibleFilterPopup">FILTER</view>
   </view>
 </page-view>

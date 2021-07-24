@@ -1,19 +1,9 @@
 .page-home {
-  &.trigger {
-    .icon-wrapper {
-      background: transparent;
-    }
-    .atom-icon {
-      color: #fff;
-    }
-  }
-  .icon-wrapper {
-    background: transparent;
-  }
-  .atom-icon {
-    color: #444;
-  }
-  .input-border {
-    border: 2rpx solid red;
+  .button {
+    margin: 100rpx auto 0;
+    width: 100rpx;
+    padding: 10rpx 20rpx;
+    text-align: center;
+    border: 1rpx solid #e1e1e1;
   }
 }

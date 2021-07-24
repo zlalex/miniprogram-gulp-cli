@@ -5,11 +5,15 @@
   left: 0;
   bottom: 0;
   z-index: 10;
-  @include flex-box();
   width: 100%;
   height: $tab-bar-height;
   @include safe-padding-bottom();
   background-color: #fff;
+  display: none;
+
+  &.visible {
+    @include flex-box();
+  }
 
   .tab-bar-item {
     flex: 1;

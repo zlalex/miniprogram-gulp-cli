@@ -9,6 +9,6 @@
   <block wx:if="{{slot}}">
     <slot></slot>
   </block>
-  <view class="atom-input-tips" wx:elif="{{isError || !isRequired}}">
-    {{isError ? validation.fail : (!isRequired ? validation.empty : '')}}</view>
+  <view class="atom-input-tips" wx:elif="{{targetValid && (targetValid.isError || !targetValid.isRequired)}}">
+    {{targetValid.isError ? targetValid.fail : (!targetValid.isRequired ? targetValid.empty : '')}}</view>
 </view>

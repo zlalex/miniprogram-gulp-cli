@@ -1,6 +1,6 @@
 <!-- 渐入渐出动画 -->
 <wxs src="../wxs/custom-tab-bar.wxs" module="_"></wxs>
-<view class="custom-tab-bar">
+<view class="custom-tab-bar {{visible ? 'visible' : ''}}">
   <block wx:for="{{tabBarConfig}}" wx:key="index">
     <view class="tab-bar-item {{_.isActive(item, activePath) && 'active'}}" data-item="{{item}}"
       bind:tap="handleTabItemActive">

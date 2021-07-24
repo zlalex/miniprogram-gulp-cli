@@ -1,0 +1,32 @@
+<view class="component-category-filter">
+  <atom-popup animate="slideUp" position="top" visible="{{visible}}">
+    <view class="category-filter-popup">
+      <view class="popup-header">
+        <view class="popup-header__inner">
+          <text bind:tap="handleCancelPopup">X</text>
+        </view>
+        <view class="active-categories category-item" wx:for="{{activeCategories}}" wx:key="index">
+          <text>{{item.name}}</text>
+          <text data-item="{{item}}" data-target-index="{{item.targetIndex}}" data-parent-index="{{item.parentIndex}}" bind:tap="triggerCategoryItem"> X </text>
+        </view>
+      </view>
+
+      <view class="popup-content">
+        <view class="category-section" wx:for="{{filterCategoryData}}" wx:key="index">
+          <view class="category-section-header">{{item.title}}</view>
+          <view class="category-item-wrapper">
+            <view class="category-item {{category.active ? 'active' : ''}}" wx:for="{{item.categories}}"
+              wx:for-item="category" wx:for-index="categoryIndex" wx:key="categoryIndex" data-item="{{category}}"
+              data-parent-index="{{index}}" data-target-index="{{categoryIndex}}" bind:tap="triggerCategoryItem">{{category.name}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="popup-footer">
+        <view class="popup-footer-button {{activeCategories.length ? 'fill' : ''}}" bind:tap="clearSelectedCategory">清除
+        </view>
+        <view class="popup-footer-button fill" bind:tap="handleFilterCategory">确认</view>
+      </view>
+    </view>
+  </atom-popup>
+</view>

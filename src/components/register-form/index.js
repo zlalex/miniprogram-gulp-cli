@@ -1,12 +1,19 @@
 import validates from '../../validates/index'
 import Validation from '../../models/Validation'
 
-const { isChineseName, isEmail } = validates
+const { isChineseName, isEmail, isNumber } = validates
 const userNameRule = new Validation({
   validate: isChineseName,
   fail: '请输入正确的姓名！',
   empty: '请输入姓名！'
 })
+
+const userNameCantNumber = new Validation({
+  validate: (value) => !isNumber(value),
+  fail: '姓名不能是数字！',
+  empty: '请输入姓名！'
+})
+
 const emailRule = new Validation({
   validate: isEmail,
   fail: '请输入正确的邮箱！',
@@ -15,14 +22,30 @@ const emailRule = new Validation({
 
 Component({
   data: {
-    userNameRule,
-    emailRule,
+    userNameRule: [userNameCantNumber, userNameRule],
+    emailRule: [emailRule],
     formData: {
       userName: 'Alex',
       email: 'zhouliang106@qq.com'
     },
     formNames: ['#user-name', '#email'],
     formComponents: [],
+    formGroup: [
+      {
+        id: 'user-name',
+        rules: userNameRule,
+        require: true,
+        label: '',
+        handle: ''
+      },
+      {
+        id: 'user-name',
+        rules: userNameRule,
+        require: true,
+        label: '',
+        handle: ''
+      },
+    ]
   },
   lifetimes: {
     attached() {
