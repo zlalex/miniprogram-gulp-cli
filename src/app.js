@@ -6,21 +6,24 @@ import storageManage from './storage/storage-manage'
 
 App({
   syncOnLaunch: null,
-  async onLaunch() {
-    this.syncOnLaunch = new Promise(async (resolve) => {
+  onLaunch() {
+    this.syncOnLaunch = new Promise((resolve) => {
       safeCallback(async () => {
-        await tokenManage.get()
-        const { unionid } = storageManage.getUserInfo()
-        const response = await api.getMemberAsync(unionid)
-        const __response = await api.getMemberPointAsync(unionid)
-        if (response.resultCode == 1 && __response.resultCode == 1) {
-          const memberInfo = response.data
-          const memberPoint = __response.data
-          storageManage.setMemberInfo({ memberInfo, memberPoint })
-        }
+        await this.handleOnLaunched()
         resolve()
       })
     })
+  },
+  async handleOnLaunched(){
+    await tokenManage.get()
+    const { unionid } = storageManage.getUserInfo()
+    const response = await api.getMemberAsync(unionid)
+    const __response = await api.getMemberPointAsync(unionid)
+    if (response.resultCode == 1 && __response.resultCode == 1) {
+      const memberInfo = response.data
+      const memberPoint = __response.data
+      storageManage.setMemberInfo({ memberInfo, memberPoint })
+    }
   },
   appData: {
     userInfo: null

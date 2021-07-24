@@ -1,7 +1,7 @@
 var isActive = function (item, activePath) {
   var result = item.path === activePath
   if (result) return result
-  return ''
+  return false
 }
 
 var activeImagePath = function (item, activePath) {
