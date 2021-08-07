@@ -1,0 +1,13 @@
+<atom-confirm visible="{{popupVisible}}" cancel-text="残忍离开" confirm-text="加油哦" bind:cancel="handleConfirmCancel"
+  bind:confirm="handleConfirm">
+  <view>content</view>
+</atom-confirm>
+
+<page-view prop-class="~page-index" mount="{{mount}}" inset-nav-bar title="绝情坑">
+  <view class="index-content" slot="content">
+    <register-form bind:submit="handleRegisterFormSubmit"></register-form>
+    <view style="min-height: 100vh;"></view>
+    <sync-image prop-class="~min-view-height" url="//www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png">
+    </sync-image>
+  </view>
+</page-view>

@@ -1,37 +1,8 @@
-const __tabBarConfig__ = [
-  {
-    name: 'category',
-    text: '分类',
-    path: 'pages/category/category',
-    defaultIconPath: '',
-    activeIconPath: ''
-  },
-  {
-    name: 'home',
-    text: '首页',
-    path: 'pages/home/home',
-    defaultIconPath: '',
-    activeIconPath: ''
-  },
-  {
-    name: 'index',
-    text: '我的',
-    path: 'pages/index/index',
-    defaultIconPath: '',
-    activeIconPath: ''
-  },
-  {
-    name: 'member',
-    text: '我的',
-    path: 'pages/member/member',
-    defaultIconPath: '',
-    activeIconPath: ''
-  }
-]
+import tabBarConfig from './config'
 
 Component({
   data: {
-    tabBarConfig: __tabBarConfig__,
+    tabBarConfig,
     activePath: '',
     visible: true
   },

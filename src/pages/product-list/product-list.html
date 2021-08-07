@@ -1,0 +1,8 @@
+<category-filter-popup visible="{{visiblePopup}}" selected-categories="{{submitCategories}}"
+  bind:confirm="handleFilterCategory" bind:cancel="visibleFilterPopup"></category-filter-popup>
+<page-view class="~page-product-list" mount fixed-header inset-nav-bar title="{{title}}">
+  <view wx:if="{{visibleBanner}}" class="product-list-height" slot="header">固定顶部</view>
+  <view class="product-list-content" slot="content">
+    <view class="button" bind:tap="visibleFilterPopup">FILTER</view>
+  </view>
+</page-view>

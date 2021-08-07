@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/home/home",
     "pages/category/category",
+    "pages/home/home",
+    "pages/shopping-cart/shopping-cart",
     "pages/member/member",
-    "pages/active/active"
+    "pages/demo/demo",
+    "pages/product-list/product-list"
   ],
   "usingComponents": {
     "atom-icon": "component-atom/icon/index",
@@ -22,14 +23,15 @@
     "color": "#000000",
     "selectedColor": "#000000",
     "backgroundColor": "#000000",
-    "list": [{
-        "pagePath": "pages/category/category"
-      },
+    "list": [
       {
         "pagePath": "pages/home/home"
       },
       {
-        "pagePath": "pages/index/index"
+        "pagePath": "pages/category/category"
+      },
+      {
+        "pagePath": "pages/shopping-cart/shopping-cart"
       },
       {
         "pagePath": "pages/member/member"

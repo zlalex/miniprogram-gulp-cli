@@ -1,5 +1,3 @@
 {
-  "usingComponents": {
-    "category-filter-popup": "../../components/category-filter/index"
-  }
+  "navigationStyle": "custom"
 }

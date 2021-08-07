@@ -1,5 +1,7 @@
 import validates from '../../validates/index'
+
 const { isFunction } = validates
+
 export default async function (handler, failOrDefault) {
   if (!isFunction(handler)) {
     throw new TypeError('callback must be a function')

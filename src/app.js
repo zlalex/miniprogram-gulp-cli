@@ -10,8 +10,8 @@ App({
     this.syncOnLaunch = new Promise((resolve) => {
       safeCallback(async () => {
         await this.getUserInfoAndMemberInfo()
-        const mockLoginData = await api.indexKoaUserAsync()
-        console.log(mockLoginData)
+        // MOCK
+        // const mockLoginData = await api.indexKoaUserAsync()
         resolve()
       })
     })
@@ -19,9 +19,10 @@ App({
   async getUserInfoAndMemberInfo() {
     await tokenManage.get()
     const { unionid } = storageManage.getUserInfo()
-    // const response = await api.getMemberAsync(unionid)
-    // const __response = await api.getMemberPointAsync(unionid)
-    const [response, __response] = await api.indexKoaMemberAsync()
+    const response = await api.getMemberAsync(unionid)
+    const __response = await api.getMemberPointAsync(unionid)
+    // MOCK
+    // const [response, __response] = await api.indexKoaMemberAsync()
     if (response.resultCode == 1 && __response.resultCode == 1) {
       const memberInfo = response.data
       const memberPoint = __response.data

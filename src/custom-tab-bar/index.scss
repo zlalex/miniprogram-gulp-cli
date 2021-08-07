@@ -20,9 +20,7 @@
     height: 100%;
     @include flex-box(center, center);
     flex-direction: column;
-
     &.active {
-
       .item-image {
         background-color: #fff;
       }
@@ -41,6 +39,6 @@
   }
 
   .tab-item-text {
-    color: #444;
+    color: #999;
   }
 }
