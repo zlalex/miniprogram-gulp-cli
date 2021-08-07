@@ -1,9 +1,14 @@
 import request from '../request/index'
 
 export default {
-  indexKoaAsync() {
+  indexKoaUserAsync() {
     return request.get({
-      url: 'http://localhost:3000'
+      url: 'http://localhost:3000/user'
+    })
+  },
+  indexKoaMemberAsync(){
+    return request.get({
+      url: 'http://localhost:3000/wechat-store'
     })
   }
 }
