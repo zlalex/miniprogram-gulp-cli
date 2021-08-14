@@ -1,9 +1,9 @@
 <!-- 渐入渐出动画 -->
 <view class="custom-nav-bar" style="{{navBarStyle}}">
   <view class="nav-bar-left">
-    <span class="nav-service">S</span>
-    <span class="nav-bar">B</span>
-    <span class="nav-home">H</span>
+    <span class="nav-service" wx:if="{{visibleServe}}">客服</span>
+    <span class="nav-bar" wx:if="{{visibleBack}}" bind:tap="handleRouteBack">返回</span>
+    <span class="nav-home" wx:if="{{visibleHome}}" bind:tap="handleRouteToHome">首页</span>
   </view>
   <view class="nav-bar-center">{{navTitle}}</view>
   <view class="nav-bar-right"></view>

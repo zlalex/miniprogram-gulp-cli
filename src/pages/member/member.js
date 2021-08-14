@@ -1,6 +1,3 @@
 Page({
-  $route: 'pages/member/member',
-  onShow(){
-    console.log(4)
-  }
+  $route: 'pages/member/member'
 })

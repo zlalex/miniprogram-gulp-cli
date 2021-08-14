@@ -4,9 +4,6 @@ Page({
     visiblePopup: false,
     submitCategories: []
   },
-  onShow(){
-    console.log(1)
-  },
   handleFilterCategory(event) {
     this.setData({ submitCategories: event.detail })
     this.visibleFilterPopup()
